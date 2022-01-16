@@ -1,0 +1,4 @@
+.env
+mcenv/
+__pycache__/
+*.sqlite3
