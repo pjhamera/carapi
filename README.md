@@ -5,6 +5,9 @@ Added cars can be rated (1-5). A list with all the cars with their average ratin
 Before a car is added to the database, the existence of the provided make and model is checked against the following external database: <br />
 https://vpic.nhtsa.dot.gov/api/ (Get Models for Make). <br />
 
+## Docker
+The app has been dockerized. It is enough to run the docker-compose file (python manage.py migrate and runserver commands are included).
+
 ## Libraries/Toolkits
 The app employs the Django Rest Framework, which is a very convenient and mighty toolkit used for building Rest APIs.
 
