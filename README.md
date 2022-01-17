@@ -75,5 +75,5 @@ Response: <br />
 
 
 ## Tests
-Tests of the endpoints can be found in car_make -> car_app -> tests.py.
+Tests of the endpoints can be found in car_app -> tests.py.
 
