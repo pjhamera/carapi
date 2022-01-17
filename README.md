@@ -6,7 +6,8 @@ Before a car is added to the database, the existence of the provided make and mo
 https://vpic.nhtsa.dot.gov/api/ (Get Models for Make). <br />
 
 ## Docker
-The app has been dockerized. It is enough to run the docker-compose file (python manage.py migrate and runserver commands are included).
+The app has been dockerized. It is enough to run the docker-compose file (python manage.py migrate and runserver commands are included in the file).
+I suggest using Postman to play around/test the API.
 
 ## Libraries/Toolkits
 The app employs the Django Rest Framework, which is a very convenient and mighty toolkit used for building Rest APIs.
