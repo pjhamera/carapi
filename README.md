@@ -13,7 +13,7 @@ I switched from the default SQLite database to the more powerful and compatible 
 in the case of Docker images is compatible with more architectures (including ARM and ARM64) <br />
 
 ## Heroku
-The app has been deployed to Heroku: https://dashboard.heroku.com/apps/carapiapp <br />
+The app has been deployed to Heroku: https://carapiapp.herokuapp.com <br />
 
 ## Browsable DRF API
 I disabled the default browsable DRF API. <br />
