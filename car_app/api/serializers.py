@@ -4,8 +4,8 @@ from ..models import Car
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
-        fields = ['id', 'make', 'model', 'avg_rating']
-        read_only_fields = ['id', 'avg_rating']
+        fields = ('id', 'make', 'model', 'avg_rating')
+        read_only_fields = ('id', 'avg_rating')
 
 class CarRatingSerializer(serializers.ModelSerializer):
     car_id = serializers.IntegerField()
@@ -16,4 +16,4 @@ class CarRatingSerializer(serializers.ModelSerializer):
 class CarPopularListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
-        fields = ['id', 'make', 'model', 'rates_number']    
+        fields = ('id', 'make', 'model', 'rates_number')    
