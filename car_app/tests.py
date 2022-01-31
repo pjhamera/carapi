@@ -3,8 +3,6 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from .models import Car
 
-# Create your tests here.
-
 class CarAddListTest(APITestCase):
 
     def test_cars_list(self):
