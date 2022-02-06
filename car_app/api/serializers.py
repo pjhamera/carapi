@@ -3,14 +3,14 @@ from django.shortcuts import get_object_or_404
 from rest_framework import generics, viewsets
 from rest_framework.exceptions import ValidationError
 from ..models import Car
-from ..car_in_database_check import check_car_in_database
+from ..models_in_database import models_from__database
 
 class CarSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         make = attrs['make']
         model = attrs['model']
         car_queryset = Car.objects.filter(make=make, model=model)
-        car_models_in_database = check_car_in_database(make)
+        car_models_in_database = models_from__database(make)
         
         if model not in car_models_in_database :
             raise ValidationError("This car does not exist")    

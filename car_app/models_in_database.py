@@ -1,8 +1,9 @@
 import urllib.request
 import json
 
-def check_car_in_database(make):
-    """Checks whether the car (model and make) is in the database"""
+def models_from__database(make):
+    """Return a list of models for a given make from the database
+    included in the URL"""
     
     URL = f'https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/{make}?format=json'
     try:
