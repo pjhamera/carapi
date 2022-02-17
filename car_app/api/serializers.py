@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, viewsets
 from rest_framework.exceptions import ValidationError
-from ..models import Car
+from ..models import Car, CarRate
 from ..models_in_database import models_from__database
 
 class CarSerializer(serializers.ModelSerializer):
@@ -27,13 +27,17 @@ class CarRatingSerializer(serializers.ModelSerializer):
     car_id = serializers.IntegerField()
     
     class Meta:
-        model = Car
+        model = CarRate
         fields = ('car_id', 'rating')           
 
 class CarPopularListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
-        fields = ('id', 'make', 'model', 'rates_number')    
+        fields = ('id', 'make', 'model', 'rates_number')  
+        
+        
+
+        
 
 
 
