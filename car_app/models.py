@@ -7,11 +7,6 @@ class Car(models.Model):
     make = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
 
-    # @property
-    # def rates_number(self):
-    #     rates_number = self.rates.all().count()
-    #     return rates_number
-
     @property
     def avg_rating(self):
         avg_rating = self.rates.all().aggregate(Avg('rating')).values()

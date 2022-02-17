@@ -1,6 +1,4 @@
 from rest_framework import serializers
-from django.shortcuts import get_object_or_404
-from rest_framework import generics, viewsets
 from rest_framework.exceptions import ValidationError
 from ..models import Car, CarRate
 from ..models_in_database import models_from__database
