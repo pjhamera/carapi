@@ -6,6 +6,7 @@ from ..models import Car, CarRate
 from ..models_in_database import models_from__database
 
 class CarSerializer(serializers.ModelSerializer):
+    
     def validate(self, attrs):
         make = attrs['make']
         model = attrs['model']
@@ -31,6 +32,8 @@ class CarRatingSerializer(serializers.ModelSerializer):
         fields = ('car_id', 'rating')           
 
 class CarPopularListSerializer(serializers.ModelSerializer):
+    rates_number = serializers.IntegerField()
+
     class Meta:
         model = Car
         fields = ('id', 'make', 'model', 'rates_number')  
