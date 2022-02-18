@@ -1,11 +1,8 @@
-from django.shortcuts import get_object_or_404
-from rest_framework import generics, viewsets
-from rest_framework.exceptions import ValidationError
+from django.db.models import Count
+from rest_framework import viewsets
 from ..models import Car, CarRate
 from .serializers import CarSerializer, CarRatingSerializer, CarPopularListSerializer
-from django.db.models import Count, F
-from django.db.models.expressions import Window
-from django.db.models.functions import Rank
+
 
 
 class CarViewset(viewsets.ModelViewSet):
