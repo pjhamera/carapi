@@ -1,10 +1,10 @@
-from django.urls import path
+from rest_framework import routers
 from . import views
 
-urlpatterns = [
-    path('cars/', views.CarViewset.as_view({'get': 'list', 'post': 'create'}), name='cars-add-list'),
-    path('cars/<int:pk>/', views.CarViewset.as_view({'delete': 'destroy'}), name='car-delete'),
-    path('rate/', views.CarRate.as_view({'post': 'create'}), name='car-rate'),
-    path('popular/', views.CarPopularListViewset.as_view({'get': 'list'}), name='cars-most-popular-list')
-]
+router = routers.DefaultRouter()
+router.register(r'cars', views.CarViewset)
+router.register(r'rate', views.CarRate)
+router.register(r'popular', views.CarPopularListViewset)
+
+
 
