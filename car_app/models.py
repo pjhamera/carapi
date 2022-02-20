@@ -3,13 +3,14 @@ from django.db.models import Avg
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+
 class Car(models.Model):
     make = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
 
     @property
     def avg_rating(self):
-        avg_rating = self.rates.all().aggregate(Avg('rating')).values()
+        avg_rating = self.rates.all().aggregate((Avg('rating'))).values()
         return avg_rating
 
     def __str__(self):

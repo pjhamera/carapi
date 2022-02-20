@@ -3,7 +3,7 @@ from rest_framework.exceptions import ValidationError
 from ..models import Car, CarRate
 from ..models_in_database import models_from__database
 
-class CarSerializer(serializers.ModelSerializer):
+class CarSerializer(serializers.ModelSerializer): 
     
     def validate(self, attrs):
         make = attrs['make']
