@@ -11,7 +11,8 @@ class Car(models.Model):
     @property
     def avg_rating(self):
         avg_rating = self.rates.all().aggregate((Avg('rating'))).values()
-        return avg_rating
+        avg_rating = set(avg_rating).pop()
+        return round(avg_rating, 1) if avg_rating is not None else 'not rated yet'
 
     def __str__(self):
         return self.make + ' ' + self.model
